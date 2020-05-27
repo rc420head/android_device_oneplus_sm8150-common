@@ -27,6 +27,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
+import android.os.VibrationEffect;
 import android.media.session.MediaSessionLegacyHelper;
 import android.os.Handler;
 import android.os.Message;
@@ -88,9 +89,6 @@ public class KeyHandler implements DeviceKeyHandler {
                 "GestureWakeLock");
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        if (mVibrator == null || !mVibrator.hasVibrator()) {
-            mVibrator = null;
-        }
     }
 
     private boolean hasSetupCompleted() {
@@ -125,10 +123,10 @@ public class KeyHandler implements DeviceKeyHandler {
     }
 
     private void doHapticFeedback() {
-        if (mVibrator == null) {
-            return;
+        if (mVibrator != null && mVibrator.hasVibrator()) {
+            mVibrator.vibrate(VibrationEffect.createOneShot(50,
+                    VibrationEffect.DEFAULT_AMPLITUDE));
         }
-	mVibrator.vibrate(50);
     }
 
     public void handleNavbarToggle(boolean enabled) {
