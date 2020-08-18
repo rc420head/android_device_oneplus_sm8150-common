@@ -212,7 +212,6 @@ vendor/lib/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib/camera/components/libdepthmapwrapper.so
 vendor/lib/libSTDualCamCaptureWT.so
 vendor/lib/lib_bokehlib.so
-vendor/lib/lib_oneplus_watermark.so
 vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_distortion_correction.so
 vendor/lib/libarcsoft_dualcam_bokeh_api.so
@@ -1043,7 +1042,7 @@ vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
 
 # NFC
--app/NxpNfcNci/NxpNfcNci.apk|e8b0be91dcdfa31411221ddf52136243f5e2b1fc
+-app/NxpNfcNci/NxpNfcNci.apk|3ee559a8d5e83fdb0e49c82a6ae8674811ecbb37
 -app/NxpSecureElement/NxpSecureElement.apk
 etc/nfcee_access.xml
 etc/permissions/com.nxp.nfc.xml
