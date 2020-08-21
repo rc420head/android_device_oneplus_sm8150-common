@@ -11,27 +11,27 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
     <string name="device_title">إعدادات OnePlus</string>
     <string name="device_summary">تعديل إعدادات خاصة بأجهزة OnePlus</string>
-    <string name="display_title">العرض</string>
+    <!-- Display modes -->
+    <string name="display_title">أوضاع العرض</string>
+    <string name="display_summary">ضبط إعدادات وتفضيلات العرض</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">وضع sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">وضع السطوع العالي</string>
-    <string name="wide_color_mode_title">وضع اللون الواسع</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">الإعتام بالتيار المستقر</string>
     <string name="dci_mode_summary"></string>
     <string name="dci_mode_title">وضع التدرج اللوني الواسع DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">الوضع الليلي</string>
+    <string name="wide_mode_summary"></string>
+    <string name="wide_mode_title">Wide colour mode</string>
     <string name="panel_category_title">أوضاع اللوحة</string>
-    <string name="panel_category_summary">أوضاع لوحة تصحيح اللون</string>
-    <string name="off_mode_title">إيقاف</string>
+    <string name="panel_category_summary">أوضاع لتصحيح لوحة اللون</string>
+    <string name="off_mode_title">لا يعمل</string>
     <string name="tile_panel_mode">أوضاع اللوحة</string>
-    <string name="dc_mode_summary"></string>
-    <string name="dc_mode_title">DC-Dimming</string>
     <string name="tile_hbm_mode">أوضاع السطوع العالي</string>
-    <string name="tile_dc_mode">DC-Dimming</string>
+    <string name="tile_dc_mode">الإعتام بالتيار المستقر</string>
     <!-- Screen off Gestures : Input -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
     <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
@@ -43,11 +43,10 @@
     <string name="touchscreen_gesture_one_finger_down_swipe_title">Swipe down with one finger</string>
     <string name="touchscreen_gesture_one_finger_left_swipe_title">Swipe left with one finger</string>
     <string name="touchscreen_gesture_one_finger_right_swipe_title">Swipe right with one finger</string>
-    <string name="touchscreen_gesture_single_tap_title">Single tap</string>
-    <string name="touchscreen_gesture_down_arrow_title">Draw a \"Λ\"</string>
-    <string name="touchscreen_gesture_up_arrow_title">Draw a \"V\"</string>
-    <string name="touchscreen_gesture_right_arrow_title">Draw a \"&lt;\"</string>
-    <string name="touchscreen_gesture_left_arrow_title">Draw a \"&gt;\"</string>
+    <string name="touchscreen_gesture_up_arrow_title">Draw a \"Λ\"</string>
+    <string name="touchscreen_gesture_down_arrow_title">Draw a \"V\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">Draw a \"&lt;\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">Draw a \"&gt;\"</string>
     <string name="touchscreen_gesture_letter_c_title">Draw the letter \"C\"</string>
     <string name="touchscreen_gesture_letter_e_title">Draw the letter \"e\"</string>
     <string name="touchscreen_gesture_letter_o_title">Draw the letter \"O\"</string>
@@ -70,18 +69,6 @@
     <string name="touchscreen_gesture_action_next_track">Play the next music track</string>
     <string name="touchscreen_gesture_action_volume_down">Lower media volume</string>
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
-    <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Screen refresh</string>
-    <string name="tile_refresh_rate">Screen refresh rate</string>
-    <string name="auto_refresh_rate_summary">Let apps decide what refresh rate to use</string>
-    <string name="auto_refresh_rate_title">Auto refresh mode</string>
-    <string name="refresh_rate_summary">Choose between 60Hz or 90Hz peak refresh</string>
-    <string name="refresh_rate_title">Force 90Hz peak refresh rate</string>
-    <string name="refresh_rate_warning">Using forced 90Hz will impact battery life significantly</string>
-    <string name="fps_info_title">FPS overlay</string>
-    <string name="fps_info_summary">Show overlay with with current frames per second</string>
-    <string name="panel_mode_info">Disable panel mode requires reboot.</string>
     <!-- Notification slider -->
     <string name="notification_slider_category_title">ممرر الإشعارات</string>
     <string name="notification_slider_selection_dialog_title">الإجراء</string>
@@ -89,14 +76,18 @@
     <string name="notification_slider_middle_position">الموضع الوسطي</string>
     <string name="notification_slider_bottom_position">الموضع السفلي</string>
     <string name="notification_slider_mode_total_silence">كتم الصوت تماماً</string>
+    <string name="notification_slider_mode_alarms_only">التنبيهات فقط</string>
     <string name="notification_slider_mode_priority_only">الأولوية فقط</string>
     <string name="notification_slider_mode_silent">صامت</string>
     <string name="notification_slider_mode_vibrate">إهتزاز</string>
-    <string name="notification_slider_mode_none">معتدل</string>
+    <string name="notification_slider_mode_none">عادي</string>
     <string name="buttons_dashboard_summary">إعدادات مزلاق التنبيه</string>
-    <!-- Vibration slider -->
+    <!-- Vibration control -->
     <string name="category_vibrator">الهزاز</string>
-    <string name="vib_strength_title_head">القوة</string>
+    <string name="vib_strength_title_head">قوة النظام</string>
     <string name="vib_strength_summary_head">تحديد قوة الهزاز</string>
-    <string name="vibration_warning">Setting strength too high may cause permanent hardware damage</string>
+    <string name="vib_call_strength_title_head">قوة الاتصال</string>
+    <string name="vib_call_strength_summary_head">حدد قوة الهزاز أثناء المكالمة الواردة</string>
+    <string name="vib_notif_strength_title_head">قوة الإشعار</string>
+    <string name="vib_notif_strength_summary_head">حدد قوة الهزاز أثناء الإشعار الوارد</string>
 </resources>

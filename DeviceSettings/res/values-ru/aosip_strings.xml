@@ -11,25 +11,25 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
     <string name="device_title">Настройки OnePlus</string>
     <string name="device_summary">Отрегулируйте настройки устройства OnePlus</string>
-    <string name="display_title">Экран</string>
+    <!-- Display modes -->
+    <string name="display_title">Режимы экрана</string>
+    <string name="display_summary">Настройки и параметры экрана</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">Режим sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Режим высокой яркости</string>
-    <string name="wide_color_mode_title">Широкий цветовой режим</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">DC-Dimming</string>
     <string name="dci_mode_summary"></string>
     <string name="dci_mode_title">Режим широкой цветовой гаммы DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Ночной режим</string>
+    <string name="wide_mode_summary"></string>
+    <string name="wide_mode_title">Режим широкой цветовой гаммы</string>
     <string name="panel_category_title">Режим панелей</string>
     <string name="panel_category_summary">Режимы для цветовой коррекции панелей</string>
     <string name="off_mode_title">Выкл</string>
     <string name="tile_panel_mode">Режим панелей</string>
-    <string name="dc_mode_summary"></string>
-    <string name="dc_mode_title">DC-Dimming</string>
     <string name="tile_hbm_mode">Режимы высокой яркости</string>
     <string name="tile_dc_mode">DC-Dimming</string>
     <!-- Screen off Gestures : Input -->
@@ -43,11 +43,10 @@
     <string name="touchscreen_gesture_one_finger_down_swipe_title">Провести вниз одним пальцем</string>
     <string name="touchscreen_gesture_one_finger_left_swipe_title">Провести влево одним пальцем</string>
     <string name="touchscreen_gesture_one_finger_right_swipe_title">Провести вправо одним пальцем</string>
-    <string name="touchscreen_gesture_single_tap_title">Одиночное нажатие</string>
-    <string name="touchscreen_gesture_down_arrow_title">Нарисовать \"Λ\"</string>
-    <string name="touchscreen_gesture_up_arrow_title">Нарисовать \"V\"</string>
-    <string name="touchscreen_gesture_right_arrow_title">Нарисовать \"&lt;\"</string>
-    <string name="touchscreen_gesture_left_arrow_title">Нарисовать \"&gt;\"</string>
+    <string name="touchscreen_gesture_up_arrow_title">Нарисовать \"Λ\"</string>
+    <string name="touchscreen_gesture_down_arrow_title">Нарисовать \"V\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">Нарисовать \"&lt;\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">Нарисовать \"&gt;\"</string>
     <string name="touchscreen_gesture_letter_c_title">Нарисовать букву \"C\"</string>
     <string name="touchscreen_gesture_letter_e_title">Нарисовать букву \"е\"</string>
     <string name="touchscreen_gesture_letter_o_title">Нарисовать букву \"O\"</string>
@@ -70,18 +69,6 @@
     <string name="touchscreen_gesture_action_next_track">Включить следующий трек</string>
     <string name="touchscreen_gesture_action_volume_down">Уменьшить громкость мультимедиа</string>
     <string name="touchscreen_gesture_action_volume_up">Увеличить громкость мультимедиа</string>
-    <string name="touchscreen_gesture_action_ambient_display">Показать Ambient Display</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Частота обновления экрана</string>
-    <string name="tile_refresh_rate">Частота обновления экрана</string>
-    <string name="auto_refresh_rate_summary">Пусть приложения решают, какую частоту обновления использовать</string>
-    <string name="auto_refresh_rate_title">Автоматический режим обновления</string>
-    <string name="refresh_rate_summary">Выберите пиковое обновление 60 Гц или 90 Гц</string>
-    <string name="refresh_rate_title">Принудительная максимальная частота обновления 90 Гц</string>
-    <string name="refresh_rate_warning">Принудительное использование 90 Гц значительно повлияет на срок службы батареи</string>
-    <string name="fps_info_title">FPS overlay</string>
-    <string name="fps_info_summary">Показать overlay с текущими кадрами в секунду</string>
-    <string name="panel_mode_info">Отключение режима панели требует перезагрузки.</string>
     <!-- Notification slider -->
     <string name="notification_slider_category_title">Слайдер уведомлений</string>
     <string name="notification_slider_selection_dialog_title">Действие</string>
@@ -89,14 +76,18 @@
     <string name="notification_slider_middle_position">Среднее положение</string>
     <string name="notification_slider_bottom_position">Нижнее положение</string>
     <string name="notification_slider_mode_total_silence">Полная тишина</string>
+    <string name="notification_slider_mode_alarms_only">Только будильник</string>
     <string name="notification_slider_mode_priority_only">Только важные</string>
     <string name="notification_slider_mode_silent">Без звука</string>
     <string name="notification_slider_mode_vibrate">Вибрация</string>
     <string name="notification_slider_mode_none">Нормальный</string>
     <string name="buttons_dashboard_summary">Параметры слайдера уведомлений</string>
-    <!-- Vibration slider -->
+    <!-- Vibration control -->
     <string name="category_vibrator">Вибрация</string>
-    <string name="vib_strength_title_head">Интенсивность</string>
+    <string name="vib_strength_title_head">Общая</string>
     <string name="vib_strength_summary_head">Установить интенсивность общей вибрации</string>
-    <string name="vibration_warning">Установка слишком высокой прочности может привести к необратимому повреждению</string>
+    <string name="vib_call_strength_title_head">Вызовы</string>
+    <string name="vib_call_strength_summary_head">Установить интенсивность вибрации при входящем звонке</string>
+    <string name="vib_notif_strength_title_head">Уведомления</string>
+    <string name="vib_notif_strength_summary_head">Установить интенсивность вибрации при входящем уведомлении</string>
 </resources>

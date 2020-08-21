@@ -17,7 +17,6 @@
 
 package com.aosip.device.DeviceSettings;
 
-
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.provider.SearchIndexableResource;

@@ -16,15 +16,14 @@
         android:title="@string/display_title">
 
         <SwitchPreference
+            android:key="hbm"
+            android:summary="@string/hbm_mode_summary"
+            android:title="@string/hbm_mode_title" />
+
+        <SwitchPreference
             android:key="dc"
             android:summary="@string/dc_mode_summary"
             android:title="@string/dc_mode_title" />
-
-        <SwitchPreference
-            android:key="hbm"
-            android:summary="@string/hbm_mode_summary"
-            android:title="@string/hbm_mode_title"
-            android:defaultValue="false" />
 
         <Preference
             android:key="panel_category"
@@ -45,34 +44,6 @@
                     android:targetPackage="com.aosip.device.DeviceSettings"
                     android:targetClass="com.aosip.device.DeviceSettings.TouchscreenGestureSettings" />
         </Preference>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="refresh"
-        android:title="@string/refresh_title">
-
-        <SwitchPreference
-            android:key="auto_refresh_rate"
-            android:summary="@string/auto_refresh_rate_summary"
-            android:title="@string/auto_refresh_rate_title"
-            android:persistent="true" />
-
-        <SwitchPreference
-            android:key="refresh_rate"
-            android:summary="@string/refresh_rate_summary"
-            android:title="@string/refresh_rate_title"
-            android:persistent="false" />
-
-        <Preference
-            android:icon="@drawable/ic_info_outline_24dp"
-            android:persistent="false"
-            android:summary="@string/refresh_rate_warning" />
-
-        <SwitchPreference
-            android:key="fps_info"
-            android:title="@string/fps_info_title"
-            android:summary="@string/fps_info_summary"
-            android:persistent="true" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -105,16 +76,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="vibrator"
         android:title="@string/category_vibrator">
-
         <com.aosip.device.DeviceSettings.VibratorStrengthPreference
             android:key="vib_strength"
             android:title="@string/vib_strength_title_head"
             android:summary="@string/vib_strength_summary_head" />
-        <Preference
-            android:icon="@drawable/ic_info_outline_24dp"
-            android:persistent="false"
-            android:summary="@string/vibration_warning" />
+
+        <com.aosip.device.DeviceSettings.VibratorCallStrengthPreference
+            android:key="vib_call_strength"
+            android:title="@string/vib_call_strength_title_head"
+            android:summary="@string/vib_call_strength_summary_head" />
+
+        <com.aosip.device.DeviceSettings.VibratorNotifStrengthPreference
+            android:key="vib_notif_strength"
+            android:title="@string/vib_notif_strength_title_head"
+            android:summary="@string/vib_notif_strength_summary_head" />
     </PreferenceCategory>
 </PreferenceScreen>

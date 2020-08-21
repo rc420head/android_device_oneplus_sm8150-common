@@ -11,25 +11,25 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
     <string name="device_title">OnePlus nastavení</string>
     <string name="device_summary">Upravte konkrétní nastavení pro zařízení OnePlus</string>
-    <string name="display_title">Displej</string>
+    <!-- Display modes -->
+    <string name="display_title">Režimy obrazovky</string>
+    <string name="display_summary">Upravte nastavení a předvolby obrazovky</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">Režim sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Režim vysokého jasu</string>
-    <string name="wide_color_mode_title">Režim širokého barevného spektra</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">DC – Ztlumení</string>
     <string name="dci_mode_summary"></string>
     <string name="dci_mode_title">Režim širokého barevného spektra DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Noční režim</string>
+    <string name="wide_mode_summary"></string>
+    <string name="wide_mode_title">Režim širokého barevného spektra</string>
     <string name="panel_category_title">Režimy panelu</string>
     <string name="panel_category_summary">Režimy pro korekci barev panelu</string>
     <string name="off_mode_title">Vyp.</string>
     <string name="tile_panel_mode">Režimy panelu</string>
-    <string name="dc_mode_summary"></string>
-    <string name="dc_mode_title">DC – Ztlumení</string>
     <string name="tile_hbm_mode">Režimy vysokého jasu</string>
     <string name="tile_dc_mode">DC – Ztlumení</string>
     <!-- Screen off Gestures : Input -->
@@ -43,11 +43,10 @@
     <string name="touchscreen_gesture_one_finger_down_swipe_title">Přejetí dolů 1 prst</string>
     <string name="touchscreen_gesture_one_finger_left_swipe_title">Přejetí vlevo 1 prst</string>
     <string name="touchscreen_gesture_one_finger_right_swipe_title">Přejetí vpravo 1 prst</string>
-    <string name="touchscreen_gesture_single_tap_title">Jedno klepnutí</string>
-    <string name="touchscreen_gesture_down_arrow_title">Nakreslit „Λ“</string>
-    <string name="touchscreen_gesture_up_arrow_title">Nakreslit „V“</string>
-    <string name="touchscreen_gesture_right_arrow_title">Nakreslit „&lt;“</string>
-    <string name="touchscreen_gesture_left_arrow_title">Nakreslit „&gt;“</string>
+    <string name="touchscreen_gesture_up_arrow_title">Nakreslit „Λ“</string>
+    <string name="touchscreen_gesture_down_arrow_title">Nakreslit „V“</string>
+    <string name="touchscreen_gesture_left_arrow_title">Nakreslit „&lt;“</string>
+    <string name="touchscreen_gesture_right_arrow_title">Nakreslit „&gt;“</string>
     <string name="touchscreen_gesture_letter_c_title">Nakreslit písmeno „C“</string>
     <string name="touchscreen_gesture_letter_e_title">Nakreslit písmeno „e“</string>
     <string name="touchscreen_gesture_letter_o_title">Nakreslit písmeno „O“</string>
@@ -70,18 +69,6 @@
     <string name="touchscreen_gesture_action_next_track">Přehrát další skladbu</string>
     <string name="touchscreen_gesture_action_volume_down">Snížit hlasitost médií</string>
     <string name="touchscreen_gesture_action_volume_up">Zvýšit hlasitost médií</string>
-    <string name="touchscreen_gesture_action_ambient_display">Zobrazit Ambientní displej</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Obnovení obrazovky</string>
-    <string name="tile_refresh_rate">Obnovovací frekvence obrazovky</string>
-    <string name="auto_refresh_rate_summary">Nechte aplikace rozhodnout, jakou obnovovací frekvenci použít</string>
-    <string name="auto_refresh_rate_title">Automatický režim obnovení</string>
-    <string name="refresh_rate_summary">Vyberte si mezi 60Hz nebo 90Hz obnovovací frekvencí</string>
-    <string name="refresh_rate_title">Vynutit maximální obnovovací frekvenci 90Hz</string>
-    <string name="refresh_rate_warning">Používání vynucené frekvence 90Hz bude mít významný vliv na životnost baterie</string>
-    <string name="fps_info_title">Překrytí FPS</string>
-    <string name="fps_info_summary">Zobrazit překrytí s aktuálním počtem snímků za sekundu</string>
-    <string name="panel_mode_info">Vypnutí režimu panelu vyžaduje restart.</string>
     <!-- Notification slider -->
     <string name="notification_slider_category_title">Posuvník oznámení</string>
     <string name="notification_slider_selection_dialog_title">Akce</string>
@@ -89,14 +76,18 @@
     <string name="notification_slider_middle_position">Pozice uprostřed</string>
     <string name="notification_slider_bottom_position">Pozice dole</string>
     <string name="notification_slider_mode_total_silence">Úplné ticho</string>
+    <string name="notification_slider_mode_alarms_only">Pouze budíky</string>
     <string name="notification_slider_mode_priority_only">Pouze prioritní</string>
     <string name="notification_slider_mode_silent">Ticho</string>
     <string name="notification_slider_mode_vibrate">Vibrace</string>
     <string name="notification_slider_mode_none">Normální</string>
     <string name="buttons_dashboard_summary">Nastavení posuvníku oznámení</string>
-    <!-- Vibration slider -->
+    <!-- Vibration control -->
     <string name="category_vibrator">Vibrace</string>
-    <string name="vib_strength_title_head">Síla</string>
+    <string name="vib_strength_title_head">Síla systémových vibrací</string>
     <string name="vib_strength_summary_head">Definovat sílu vibrací</string>
-    <string name="vibration_warning">Příliš vysoké nastavení síly vibrací může způsobit trvalé poškození hardwaru</string>
+    <string name="vib_call_strength_title_head">Síla vibrací při volání</string>
+    <string name="vib_call_strength_summary_head">Definovat sílu vibrací při příchozím volání</string>
+    <string name="vib_notif_strength_title_head">Síla vibrací při oznámení</string>
+    <string name="vib_notif_strength_summary_head">Definovat sílu vibrací při příchozím oznámení</string>
 </resources>

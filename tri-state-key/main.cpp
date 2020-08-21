@@ -16,7 +16,6 @@
 
 #define LOG_TAG "tri-state-key_daemon"
 
-#include <android-base/file.h>
 #include <android-base/logging.h>
 #include <fcntl.h>
 #include <linux/input.h>
@@ -25,15 +24,10 @@
 
 #include "uevent_listener.h"
 
-#define HALL_CALIBRATION_DATA "/sys/bus/platform/devices/soc:tri_state_key/hall_data_calib"
-#define HALL_PERSIST_CALIBRATION_DATA "/mnt/vendor/persist/engineermode/tri_state_hall_data"
-
 #define KEY_MODE_NORMAL 601
 #define KEY_MODE_VIBRATION 602
 #define KEY_MODE_SILENCE 603
 
-using android::base::ReadFileToString;
-using android::base::WriteStringToFile;
 using android::Uevent;
 using android::UeventListener;
 
@@ -44,11 +38,6 @@ int main() {
     UeventListener uevent_listener;
 
     LOG(INFO) << "Started";
-
-    if (std::string hallData; ReadFileToString(HALL_PERSIST_CALIBRATION_DATA, &hallData)) {
-        std::replace(hallData.begin(), hallData.end(), ';', ',');
-        WriteStringToFile(hallData, HALL_CALIBRATION_DATA);
-    }
 
     uinputFd = open("/dev/uinput", O_WRONLY | O_NONBLOCK);
     if (uinputFd < 0) {
@@ -91,7 +80,7 @@ int main() {
         }
 
         bool none = uevent.state.find("USB=0") != std::string::npos;
-        bool vibration = uevent.state.find("USB-HOST=0") != std::string::npos;
+        bool vibration = uevent.state.find("USB_HOST=0") != std::string::npos;
         bool silent = uevent.state.find("null)=0") != std::string::npos;
 
         int keyCode;
